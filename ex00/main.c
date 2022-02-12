@@ -6,61 +6,80 @@
 /*   By: asoler <asoler@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 16:10:17 by asoler            #+#    #+#             */
-/*   Updated: 2022/02/12 18:08:47 by asoler           ###   ########.fr       */
+/*   Updated: 2022/02/12 18:57:08 by asoler           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <unistd.h>
 
-int count(char *par)
-{
-	int i;
+// int count(char *par)
+// {
+// 	int i;
 
-	i = 0;
+// 	i = 0;
 
-	while (par[0] != '\0')
-		i++;
-	return(i);
-}
+// 	while (par[0] != '\0')
+// 		i++;
+// 	return(i);
+// }
 
 char *matrix(char *parametros)
 {
-	if (count(parametros) == 16)
-	{
-		
-	}
-}
-
-char *split_parameters(char *par)
-{
+	int row;
+	int col;
 	int size;
-	int i;
-	int index;
-	char aux[17];
-	aux[16] = '\0';
-	size = count(par);
-	index = 0;
-	i = 0;
+	
+	size = count(parametros);
 
-	while (par[i] = '\0')
+	row = 0;
+	if (size == 16)
 	{
-		if (i % 2 == 0 && i < 30) //30 é o tamanho da minha strig parametro comezando de 0
+		parametros[4][4] = {{1, 2, 3, 4},{2, 3, 4, 1},{3, 4, 1, 2},{4, 1, 2, 3}};
+	
+	while (row <=  3)
+	{
+		col = 0;
+		while (col <= 3)
 		{
-			aux[index] = par[i];
-			index++;
+			write(1, &matr[row][col], 1);
+			col++;
 		}
-		i++;
+		row++;
 	}
-	return[aux]
 }
+
+// char *split_parameters(char *par)
+// {
+// 	int i;
+// 	int index;
+// 	char aux[17];
+// 	aux[16] = '\0';
+// 	index = 0;
+// 	i = 0;
+
+// 	while (par[i] != '\0')
+// 	{
+// 		if (i % 2 == 0 && i < 30) //30 é o tamanho da minha strig parametro comezando de 0
+// 		{
+// 			aux[index] = par[i];
+// 			index++;
+// 		}
+// 		i++;
+// 	}
+// 	par = aux;
+// 	return(par);
+// }
 
 
 int	main(int argc, char *argv[])
 {
-	char parametros[17];
+	char *parameters;
+	char *matriz;
 
-	parametros[17] = split_parameters(argv[argc - 1]);
+	parameters = split_parameters(argv[argc - 1]);
 
+	matriz = matrix(parametros);
+	printf("%s", parameters)
 
-	matrix(parametros)
 }
