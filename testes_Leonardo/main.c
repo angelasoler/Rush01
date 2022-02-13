@@ -6,7 +6,7 @@
 /*   By: asoler <asoler@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 23:06:16 by lledo-da          #+#    #+#             */
-/*   Updated: 2022/02/13 23:32:48 by asoler           ###   ########.fr       */
+/*   Updated: 2022/02/14 00:31:52 by asoler           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int count(char *s)
 }
 
 char *split(char *aux, char *s);
-void print_matrix(char *arg);
+void print_matrix(char **matr, char *arg);
 
 int main(int argc, char *argv[])
 {

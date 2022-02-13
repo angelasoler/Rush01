@@ -6,7 +6,7 @@
 /*   By: asoler <asoler@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 23:06:52 by lledo-da          #+#    #+#             */
-/*   Updated: 2022/02/13 23:42:10 by asoler           ###   ########.fr       */
+/*   Updated: 2022/02/14 00:33:26 by asoler           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 	// 4 3 2 1 ezq
 	// 1 2 2 2 dir
 	// 0 -> 4 1 ->
-	char *process_matr(char *matrix[4][4], char *arg)
+	char **process_matr(char **matrix, char *arg)
 	{
 		int n;
 		int x;
