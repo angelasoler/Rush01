@@ -3,16 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lledo-da <lledo-da@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: asoler <asoler@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 23:06:16 by lledo-da          #+#    #+#             */
-/*   Updated: 2022/02/12 23:08:46 by lledo-da         ###   ########.fr       */
+/*   Updated: 2022/02/13 19:04:31 by asoler           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void print_matrix(void);
+void print_matrix(int size);
 
-int main(void)
+int main(int argc, char *argv[])
 {
-	print_matrix();
+	int x;
+
+	x = *argv[argc - 1] - 48;
+	print_matrix(x);
 }
