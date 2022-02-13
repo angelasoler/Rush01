@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_matrix.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lledo-da <lledo-da@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: asoler <asoler@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 23:06:52 by lledo-da          #+#    #+#             */
-/*   Updated: 2022/02/12 23:19:34 by lledo-da         ###   ########.fr       */
+/*   Updated: 2022/02/13 18:50:05 by asoler           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ void print_matrix()
 		while(col <= 3)
 		{
 			write(1, &matrix[row][col], 1);
-			write(1, " ", 1);
+			if (col != 3)
+				write(1, " ", 1);
 			col++;
 		}
 		row++;
