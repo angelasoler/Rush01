@@ -1,35 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_matrix.c                                     :+:      :+:    :+:   */
+/*   ft_treat_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lledo-da <lledo-da@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/12 23:06:52 by lledo-da          #+#    #+#             */
-/*   Updated: 2022/02/12 23:19:34 by lledo-da         ###   ########.fr       */
+/*   Created: 2022/02/12 23:25:57 by lledo-da          #+#    #+#             */
+/*   Updated: 2022/02/12 23:34:15 by lledo-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void print_matrix()
+void ft_treat_params(int argc, char *argv[])
 {
-	char matrix[4][4] = {{'0', '0', '0', '0'}, {'0', '0', '0', '0'}, {'0', '0', '0', '0'}, {'0', '0', '0', '0'}};
-	int row;
-	int col;
-	
-	row = 0;
-	col = 0;
-	while(row <= 3)
+	int counter;
+
+	counter = 0;
+	while(counter < argc)
 	{
-		while(col <= 3)
-		{
-			write(1, &matrix[row][col], 1);
-			write(1, " ", 1);
-			col++;
-		}
-		row++;
-		col = 0;
-		write(1, "\n", 1);
+		write(1, "Hello", 5);
 	}
 }
