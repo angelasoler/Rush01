@@ -6,14 +6,16 @@
 /*   By: asoler <asoler@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 23:06:52 by lledo-da          #+#    #+#             */
-/*   Updated: 2022/02/13 19:05:31 by asoler           ###   ########.fr       */
+/*   Updated: 2022/02/13 19:16:32 by asoler           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-
-
+//[TODO]
+// char *retorna uma array inicializado q vamos modificar para printar numeros de 1 a 4
+// usar uma funçãmo maloqui para poder fazer uma matriz maior q 4.
+// ou talves uma função auxiliar recursiva para converter char en int
 void print_matrix(int size)
 {
 	char matrix[size][size];
