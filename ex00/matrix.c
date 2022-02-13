@@ -1,11 +1,14 @@
 #include <unistd.h>
 
-void matrix(void)
+char processamento_de_parametro(char *array, argv);
+void matrix(char *array_processado)
 {
+
 	int row;
 	int col;
-	char mtr[4][4] = {{'1', '2', '3', '4'},{'2', '3', '4', '1'},{'3', '4', '1', '2'},{'4', '1', '2', '3'}};
+	char mtr[4][4] = {{'0', '0', '0', '0'},{'0', '0', '0', '0'},{'0', '0', '0', '0'},{'0', '0', '0', '0'}};
 
+	processamento_de_parametro(mtr[4][4], paremeters);
 	row = 0;
 	while (row <=  3)
 	{
@@ -22,5 +25,6 @@ void matrix(void)
 
 int	main()
 {
-	matrix();
+	char *arra;
+	array = matrix();
 }

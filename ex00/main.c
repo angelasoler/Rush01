@@ -6,7 +6,7 @@
 /*   By: asoler <asoler@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 16:10:17 by asoler            #+#    #+#             */
-/*   Updated: 2022/02/12 18:57:08 by asoler           ###   ########.fr       */
+/*   Updated: 2022/02/12 22:35:00 by asoler           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,37 +49,40 @@ char *matrix(char *parametros)
 	}
 }
 
-// char *split_parameters(char *par)
-// {
-// 	int i;
-// 	int index;
-// 	char aux[17];
-// 	aux[16] = '\0';
-// 	index = 0;
-// 	i = 0;
+char *split_parameters(char *par)
+{
+	int i;
+	int index;
+	char aux[17];
+	aux[16] = '\0';
+	index = 0;
+	i = 0;
 
-// 	while (par[i] != '\0')
-// 	{
-// 		if (i % 2 == 0 && i < 30) //30 é o tamanho da minha strig parametro comezando de 0
-// 		{
-// 			aux[index] = par[i];
-// 			index++;
-// 		}
-// 		i++;
-// 	}
-// 	par = aux;
-// 	return(par);
-// }
+	while (par[i] != '\0')
+	{
+		if (i % 2 == 0 && i < 30) //30 é o tamanho da minha strig parametro comezando de 0
+		{
+			aux[index] = par[i];
+			index++;
+		}
+		i++;
+	}
+	par = aux;
+	return(par);
+}
 
 
 int	main(int argc, char *argv[])
 {
-	char *parameters;
-	char *matriz;
+	char dest[4][4];
+	char *array_processado;
+	array_processado = processamento_de_parametro(dest, argv[argc - 1]);
+	matrix(array_processado);
+	// char *parameters;
+	// char *matriz;
 
-	parameters = split_parameters(argv[argc - 1]);
+	// parameters = split_parameters(argv[argc - 1]);
 
-	matriz = matrix(parametros);
-	printf("%s", parameters)
-
+	// matriz = matrix(parametros);
+	// printf("%s", parameters)
 }
