@@ -12,12 +12,12 @@ int count(char *par)
 	return(i);
 }
 
-char *split_parameters(char *par)
+char *split_parameters(char *par, )
 {
 	int i;
 	int index;
-	// char aux[17];
-	// aux[16] = '\0';
+	char aux[17];
+	aux[16] = '\0';
 	index = 0;
 	i = 0;
 
@@ -25,8 +25,21 @@ char *split_parameters(char *par)
 	{
 		if (i % 2 == 0)
 		{
-			if (par[i] == '1')
+			aux[index] = ;
+			index++;
+			if (par[0] == '1' && par[4] == '4')
+			{
+
+				// nossa_array[0][0] = '1';
+				// nossa_array[1][0] = '2';
+				// nossa_array[2][0] = '3';
+				// nossa_array[3][0] = '4';
+			}
 			if (par[i] == '2')
+				nossa_array[][0] = '1';
+				nossa_array[1][0] = '2';
+				nossa_array[2][0] = '3';
+				nossa_array[3][0] = '4';
 			if (par[i] == '3')
 			if (par[i] == '4')
 		}
