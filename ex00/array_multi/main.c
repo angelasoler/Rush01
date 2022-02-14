@@ -6,12 +6,10 @@
 /*   By: asoler <asoler@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 23:06:16 by lledo-da          #+#    #+#             */
-/*   Updated: 2022/02/14 01:02:43 by asoler           ###   ########.fr       */
+/*   Updated: 2022/02/14 01:41:26 by asoler           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// void print_matrix(int size);
-#include <stdio.h>
 #include <unistd.h>
 
 char *split(char *aux, char *s)
